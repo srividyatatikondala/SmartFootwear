@@ -26,6 +26,10 @@ A wearable technology system designed to help soldiers detect landmines and rece
 - Supports soldiers with silent alerts and GPS tracking.
 - Improves communication and reporting to command centers.
 
+
+![WhatsApp Image 2024-09-14 at 1 14 57 PM](https://github.com/user-attachments/assets/8dbde491-c438-40f7-99e7-825f6f178f28)
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
