@@ -1,0 +1,74 @@
+#include <NewPing.h> 
+
+#define TRIGGER_PIN 6 
+#define ECHO_PIN 7    
+#define MAX_DISTANCE 200 
+
+NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); 
+
+char t = ' '; 
+unsigned long previousMillis = 0; // Variable to store the previous time
+
+const unsigned long interval = 1000; // Interval in milliseconds
+
+void setup() {
+  pinMode(13, OUTPUT); // Left motors forward
+  pinMode(12, OUTPUT); // Left motors reverse
+  pinMode(11, OUTPUT); // Right motors forward
+  pinMode(10, OUTPUT); // Right motors reverse
+  pinMode(9, OUTPUT);  // LED
+  Serial.begin(9600);
+}
+
+void loop() {
+  unsigned long currentMillis = millis(); // Get the current time
+  
+  if (currentMillis - previousMillis >= interval) { // Check if it's time to execute the loop
+    previousMillis = currentMillis; // Save the last time the loop was executed
+    
+    if (Serial.available()) {
+      t = Serial.read();
+      Serial.println(t);
+    }
+
+    if (t == 'F' && !obstacleDetected()) { // Move forward if no obstacle is detected
+      digitalWrite(13, HIGH);
+      digitalWrite(12, LOW);
+      digitalWrite(11, HIGH);
+      digitalWrite(10, LOW);
+    } else if (t == 'B' && !obstacleDetected()) { // Move reverse if no obstacle is detected
+      digitalWrite(13, LOW);
+      digitalWrite(12, HIGH);
+      digitalWrite(11, LOW);
+      digitalWrite(10, HIGH);
+    } else if (t == 'L' && !obstacleDetected()) { // Turn right if no obstacle is detected
+      digitalWrite(13, HIGH);
+      digitalWrite(12, LOW);
+      digitalWrite(11, LOW);
+      digitalWrite(10, LOW);
+    } else if (t == 'R' && !obstacleDetected()) { // Turn left if no obstacle is detected
+      digitalWrite(13, LOW);
+      digitalWrite(12, LOW);
+      digitalWrite(11, HIGH);
+      digitalWrite(10, LOW);
+    } else if (t == 'W') { // Turn LED on
+      digitalWrite(9, HIGH);
+    } else if (t == 'w') { // Turn LED off
+      digitalWrite(9, LOW);
+    } else if (t == 'S') { // Stop (all motors stop)
+      digitalWrite(13, LOW);
+      digitalWrite(12, LOW);
+      digitalWrite(11, LOW);
+      digitalWrite(10, LOW);
+    }
+  }
+}
+
+bool obstacleDetected() {
+  unsigned int distance = sonar.ping_cm(); // Measure the distance to the nearest object in centimeters
+  if (distance > 0 && distance <= 10) { // If distance is less than or equal to 10 cm, obstacle detected
+    return true;
+  } else {
+    return false;
+  }
+}
