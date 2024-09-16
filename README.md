@@ -1,9 +1,8 @@
 # Smart Footwear Landmine Detection System
 
 ## Overview!
-![Uploading image.png…]()
 
-
+/home/srividya/Documents/x.png
 
 A wearable technology system designed to help soldiers detect landmines and receive real-time alerts, preventing accidental triggering in hazardous areas.
 
