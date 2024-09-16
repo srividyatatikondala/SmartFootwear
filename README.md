@@ -1,6 +1,9 @@
 # Smart Footwear Landmine Detection System
 
-## Overview
+## Overview!
+[Uploading IMG20240614221942.jpg…]()
+
+
 
 A wearable technology system designed to help soldiers detect landmines and receive real-time alerts, preventing accidental triggering in hazardous areas.
 
@@ -19,6 +22,8 @@ A wearable technology system designed to help soldiers detect landmines and rece
 1. Sensors in the footwear continuously scan the ground.
 2. Upon detecting a landmine, the GPS logs the location, and an alert is sent to the wristband.
 3. The TTGO T-Call microcontroller processes the data and sends alerts to command centers via Bluetooth or satellite communication.
+   
+![IMG20240614222110](https://github.com/user-attachments/assets/71a9399d-b528-4b41-b1d0-c7ab73e38a2f)
 
 ## Benefits
 
