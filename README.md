@@ -1,7 +1,7 @@
 # Smart Footwear Landmine Detection System
 
 ## Overview!
-[Uploading IMG20240614221942.jpg…]()
+![Uploading image.png…]()
 
 
 
