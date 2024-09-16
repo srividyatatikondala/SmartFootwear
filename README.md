@@ -2,7 +2,7 @@
 
 ## Overview!
 
-file:///home/srividya/Documents/x.png
+![x](https://github.com/user-attachments/assets/d0c6a05a-4345-4a7c-8387-55506afdc24f)
 
 A wearable technology system designed to help soldiers detect landmines and receive real-time alerts, preventing accidental triggering in hazardous areas.
 
