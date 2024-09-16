@@ -40,3 +40,7 @@ A wearable technology system designed to help soldiers detect landmines and rece
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+https://github.com/user-attachments/assets/6a47624f-6406-4d60-a5fb-5b84c38e2315
+
