@@ -15,6 +15,9 @@ A wearable technology system designed to help soldiers detect landmines and rece
   - Logs location data (latitude and longitude) when a landmine is detected.
 - **Wristband Alert**:
   - Vibrates silently to alert the soldier without revealing their position.
+ 
+  
+  Note:Initial demonstrations are done on car 
 
 ## Operation
 
